@@ -1,0 +1,20 @@
+<!-- <div class="bg-dark" style="text-align:center;color: #fff"> </div> 
+  <h2 class="navbar-brand ">  
+    Welcome to {{ title }}!  
+  </h2>  
+  <select #langSelect (change)="changeLang(langSelect.value)">  
+      <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>  
+  </select>  
+<div class="row">  
+  <div class="col-md-2">  
+    <ul class="list-group">  
+      <li class="list-group-item">{{ title| translate }}</li>  
+      <li class="list-group-item">{{ 'CpuInfo' | translate }}</li>  
+     </ul>  
+  </div>  
+  <div class="col-md-8">  
+    <router-outlet></router-outlet>  
+  </div>  
+</div> -->
+
+<app-cpu-details></app-cpu-details>

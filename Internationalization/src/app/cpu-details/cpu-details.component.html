@@ -1,0 +1,34 @@
+<div class="top">
+  Select Language
+<select #langSelect (change)="changeLang(langSelect.value)">  
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>  
+</select> 
+</div>
+<div class="card-wrapper" >
+    <div class="card"><i class="fas fa-microchip"></i>{{ 'CPU'| translate }}
+    <div class="card-body">
+        <table border="5" bordercolor="#ff0000">
+          <tr *ngFor="let fileContents of cpuContentList">
+            <td>{{fileContents.name | translate}}</td>
+           <td>{{fileContents.value}}</td>
+          
+         </tr>
+        </table>
+      </div>
+     
+    </div>
+    
+  <div class="card"><i class="fas fa-microchip"></i>{{ 'Battery' |translate }}
+      <div class="card-body">
+        <table border="5" bordercolor="#ff0000" >
+  
+            <tr *ngFor="let fileContents of batteryDetails">
+              <td>{{fileContents.name | translate }}</td>
+             <td>{{fileContents.value}}</td>
+            
+           </tr>
+          </table>
+        </div>
+       
+      </div>
+    </div>
